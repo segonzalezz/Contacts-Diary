@@ -26,7 +26,6 @@ class user_Controller:
         existing_user = self.db.users.find_one({"username":username, "password":password})
         if existing_user:
             return True
-            self.user_get_capture = username
         else:
             return False
 

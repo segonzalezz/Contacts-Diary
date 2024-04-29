@@ -251,7 +251,6 @@ def login_user():
     controller = user_Controller()
     if controller.login_user(username, password):
         open_menu_user()
-        close_window()
     else:
         messagebox.showerror("Error","Incorrect username and password")
 def open_menu_user():
