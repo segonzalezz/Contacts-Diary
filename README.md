@@ -1,2 +1,4 @@
-Contacts - Diary
-First the frame´s by Sen Gideons 
+# Contacts - Diary
+By Sen Gideons
+
+```java
