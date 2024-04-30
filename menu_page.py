@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import subprocess
 
 def create_menu_page():
     root = tk.Tk()
@@ -23,8 +24,9 @@ def create_menu_page():
     buttons_frame = tk.Frame(root, bg="#525561")
     buttons_frame.pack(pady=20)
 
-    add_button = tk.Button(buttons_frame, text="Add", bg="#206DB4", fg="white", padx=10, pady=5, borderwidth=0, relief=tk.RIDGE)
-    add_button.grid(row=0, column=0, padx=10)
+    add_button = tk.Button(buttons_frame, text="Add", bg="#206DB4", fg="white", padx=10, pady=5, borderwidth=0, relief=tk.RIDGE, command= lambda : open_menu_page_create(root))
+    add_button.grid(row=0, column=0, padx=10 )
+
 
     search_button =     tk.Button(buttons_frame, text="Search", bg="#206DB4", fg="white", padx=10, pady=5, borderwidth=0, relief=tk.RIDGE)
     search_button.grid(row=0, column=1, padx=10)
@@ -35,7 +37,13 @@ def create_menu_page():
     delete_button = tk.Button(buttons_frame, text="Delete", bg="#206DB4", fg="white", padx=10, pady=5, borderwidth=0, relief=tk.RIDGE)
     delete_button.grid(row=0, column=3, padx=10)
 
+    def open_menu_page_create(root):
+        root.destroy()
+        subprocess.run(["python", "menu_page_create.py"])
+
+
     root.mainloop()
+
 
 
 

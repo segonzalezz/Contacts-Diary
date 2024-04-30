@@ -4,6 +4,7 @@ from Model.user import user
 class user_Controller:
     def __init__(self):
         self.db = connect_database()
+        self.username_get_capture = None
 
     def create_user(self, name:str, lastName:str, location:str, phone:int, username:str, password:str):
         existing_user = self.db.users.find_one({"username": username})
@@ -22,7 +23,6 @@ class user_Controller:
             self.db.users.insert_one(user_info)
 
     def login_user(self, username:str, password:str):
-        username = user.get_username
         existing_user = self.db.users.find_one({"username":username, "password":password})
         if existing_user:
             return True
@@ -30,4 +30,5 @@ class user_Controller:
             return False
 
     def username_get_capture(self):
-        return self.user_get_capture
+        return self.username_get_capture
+

@@ -202,7 +202,6 @@ forgotPassword.place(x=210, y=400, width=150, height=35)
 
 
 def forgot_password():
-
     win = Toplevel()
     window_width = 350
     window_height = 350
@@ -251,6 +250,8 @@ def login_user():
     controller = user_Controller()
     if controller.login_user(username, password):
         open_menu_user()
+        captured = controller.username_get_capture()
+        print("User Capture: ", captured)
     else:
         messagebox.showerror("Error","Incorrect username and password")
 def open_menu_user():
