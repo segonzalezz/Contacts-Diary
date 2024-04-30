@@ -37,8 +37,7 @@ def create_menu_page():
     delete_button = tk.Button(buttons_frame, text="Delete", bg="#206DB4", fg="white", padx=10, pady=5, borderwidth=0, relief=tk.RIDGE)
     delete_button.grid(row=0, column=3, padx=10)
 
-    def open_menu_page_create(root):
-        root.destroy()
+    def open_menu_page_create():
         subprocess.run(["python", "menu_page_create.py"])
 
 
