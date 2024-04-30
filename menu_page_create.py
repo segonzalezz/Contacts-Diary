@@ -51,7 +51,7 @@ email_label.place(x=40, y=372)
 
 #Button
 create = Button(win, fg='#f8f8f8', text='Create', bg='#1D90F5', font=("yu gothic ui", 12, "bold"),
-                     cursor='hand2', relief="flat", bd=0, highlightthickness=0, activebackground="#1D90F5", command= lambda : create_contact(),)
+                     cursor='hand2', relief="flat", bd=0, highlightthickness=0, activebackground="#1D90F5", command= lambda : create_contact())
 create.place(x=40, y=470, width=256, height=45)
 
 def create_contact():
