@@ -15,7 +15,5 @@ class contact_controller():
                 user_instance = user(existing_user["name"], existing_user["lastname"], existing_user["location"],
                                      existing_user["number"], existing_user["email"])
                 user_instance.create_contact(name, lastname, location, number, email)
-                return True
             else:
                 print("User not found")
-                return False
