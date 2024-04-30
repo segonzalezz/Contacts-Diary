@@ -25,10 +25,11 @@ class user_Controller:
     def login_user(self, username:str, password:str):
         existing_user = self.db.users.find_one({"username":username, "password":password})
         if existing_user:
+            self.username_get_capture = existing_user
             return True
         else:
             return False
 
-    def username_get_capture(self):
+    def get_capture(self):
         return self.username_get_capture
 

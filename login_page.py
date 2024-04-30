@@ -250,8 +250,6 @@ def login_user():
     controller = user_Controller()
     if controller.login_user(username, password):
         open_menu_user()
-        captured = controller.username_get_capture()
-        print("User Capture: ", captured)
     else:
         messagebox.showerror("Error","Incorrect username and password")
 def open_menu_user():
