@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter.messagebox
 
 win = Tk()
 window_width = 350
@@ -48,10 +49,26 @@ email_entry.config(highlightbackground="#3D404B", highlightcolor="#206DB4")
 email_label = Label(win, text='• Email:', fg="#FFFFFF", bg='#272A37', font=("yu gothic ui", 11, 'bold'))
 email_label.place(x=40, y=372)
 
-# Update Password Button
-update_pass = Button(win, fg='#f8f8f8', text='Create', bg='#1D90F5', font=("yu gothic ui", 12, "bold"),
-                     cursor='hand2', relief="flat", bd=0, highlightthickness=0, activebackground="#1D90F5")
-update_pass.place(x=40, y=470, width=256, height=45)
+#Button
+create = Button(win, fg='#f8f8f8', text='Create', bg='#1D90F5', font=("yu gothic ui", 12, "bold"),
+                     cursor='hand2', relief="flat", bd=0, highlightthickness=0, activebackground="#1D90F5", command= lambda : create_contact(),)
+create.place(x=40, y=470, width=256, height=45)
+
+def create_contact():
+    from Controller.contact_Controller import contact_controller
+    controller = contact_controller()
+    name = name_entry.get()
+    lastname = lastname_entry.get()
+    location = location_entry.get()
+    number = number_entry.get()
+    email = email_entry.get()
+    if controller.create_contact(name, lastname, location, number, email):
+        tkinter.messagebox.showinfo("Success", "Contact created successfully")
+    else:
+        tkinter.messagebox.showerror("Error","Failed to create contact")
+
+
+
 
 win.mainloop()
 

@@ -2,10 +2,6 @@ import subprocess
 import tkinter.messagebox
 from tkinter import *
 from tkinter import messagebox
-from Controller.user_Controller import user_Controller
-
-
-
 
 window = Tk()
 
@@ -245,6 +241,7 @@ def open_signup():
     subprocess.run(["python","register_page.py"])
 
 def login_user():
+    from Controller.user_Controller import user_Controller
     username = Login_Username_entry.get()
     password = Login_passwordName_entry.get()
     controller = user_Controller()
@@ -252,9 +249,11 @@ def login_user():
         open_menu_user()
     else:
         messagebox.showerror("Error","Incorrect username and password")
+
 def open_menu_user():
     import menu_page
     menu_page.create_menu_page()
+
 def close_window():
     window.destroy()
 
