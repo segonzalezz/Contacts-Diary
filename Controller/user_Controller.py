@@ -30,6 +30,3 @@ class user_Controller:
         else:
             return False
 
-    def get_capture(self):
-        return self.username_get_capture
-
