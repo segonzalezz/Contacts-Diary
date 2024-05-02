@@ -12,8 +12,7 @@ class contact_controller():
         if user_username == current_username:
             existing_user = self.db.users.find_one({"username": user_username})
             if existing_user:
-                user_instance = user(existing_user["name"], existing_user["lastname"], existing_user["location"],
-                                     existing_user["number"], existing_user["email"])
+                user_instance = user()
                 user_instance.create_contact(name, lastname, location, number, email)
             else:
                 print("User not found")
