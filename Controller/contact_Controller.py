@@ -2,7 +2,7 @@ from PyConnection.db_Controller import connect_database
 from Controller.user_Controller import user_Controller
 from Model.user import user
 
-class contact_controller():
+class contact_controller:
     def __init__(self):
         self.db = connect_database()
         print(self.db)
