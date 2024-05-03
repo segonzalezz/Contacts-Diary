@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter.messagebox
-from Controller.contact_Controller import contact_controller
+from Controller.contact_Controller import contact_Controller
 
 win = Tk()
 window_width = 350
@@ -56,7 +56,7 @@ create = Button(win, fg='#f8f8f8', text='Create', bg='#1D90F5', font=("yu gothic
 create.place(x=40, y=470, width=256, height=45)
 
 def create_contact():
-    controller = contact_controller()
+    controller = contact_Controller()
     name = name_entry.get()
     lastname = lastname_entry.get()
     location = location_entry.get()
