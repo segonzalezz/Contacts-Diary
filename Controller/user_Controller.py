@@ -6,19 +6,18 @@ class user_Controller:
         self.db = connect_database()
         self.username_get_capture = None
 
-    def create_user(self, name:str, lastName:str, location:str, phone:int, username:str, password:str):
+    def create_user(self, name:str, lastname:str, location:str, phone:int, username:str, password:str):
         existing_user = self.db.users.find_one({"username": username})
         if existing_user:
             print("User already exists in the database")
         else:
-            test_user = user(name, lastName, location, phone, username, password)
             user_info = {
-                "name" : test_user.get_name,
-                "lastName" : test_user.get_lastName,
-                "location" : test_user.get_location,
-                "phone" : test_user.get_phone,
-                "username" : test_user.get_username,
-                "password" : test_user.get_password,
+                "name" : name,
+                "lastName" : lastname,
+                "location" : location,
+                "phone" : phone,
+                "username" : username,
+                "password" : password,
             }
             self.db.users.insert_one(user_info)
 
