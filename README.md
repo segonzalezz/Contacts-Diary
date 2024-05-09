@@ -1,8 +1,9 @@
 # Contacts - Diary
-By Sen Gideons.
-Okay first created the packages:
-- Lista de elementos
-- Otro elemento
+Okay, this project is about contact diary, so lets to check a design pattern to create preoject, In this case we use MVC.
+First created the packages:
+- Package Model
+- Package View
+- Package Controller
 
 ```java
 
