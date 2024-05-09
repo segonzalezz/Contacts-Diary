@@ -7,6 +7,6 @@ Okay, this project is about contact diary, so lets to check a design pattern to 
 - Package Controller
 - Package Py.Connection
 
-The Py.Connection has the connectio to db, to this project we are gonna use pymongo
+The Py.Connection has the connection to db, to this project we are gonna use pymongo
 ```java
 
