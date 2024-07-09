@@ -27,4 +27,4 @@ def connect_database():
         db = client[db_name]
     return db
 ```
-In this connection lets to check because, mongo can create to return the condition in this connect_database() method
+In this connection lets to check because mongo can create to return the condition in this connect_database() method, but the condition is a if and else and if dont exist the database, cliente create database and return the database.
