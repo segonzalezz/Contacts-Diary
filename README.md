@@ -27,5 +27,3 @@ def connect_database():
         db = client[db_name]
     return db
 ```
-
-fjsngk
